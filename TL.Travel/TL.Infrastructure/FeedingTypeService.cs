@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,11 +80,7 @@ namespace TL.Travel.Infrastructure
 
         public bool Delete(int id)
         {
-            var entity = Db.FeedingTypes.FirstOrDefault(ft => ft.Id == id);
-            if (entity == null) return false;
-            entity.IsActive = false;
-            Db.SaveChanges();
-            return true;
+            return SoftDeleteById<FeedingType>(id);
         }
     }
 }
