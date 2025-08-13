@@ -1,134 +1,168 @@
-<div class="flex flex-col items-center w-full">
-  <div class="w-full max-w-4xl">
-    <h1 class="text-3xl font-bold mb-8 mt-8 text-center">Добави резервация</h1>
-    <!-- Основна информация -->
-    <div class="bg-white rounded-xl shadow p-6 mb-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <mat-form-field appearance="outline">
-          <mat-label>Дата на пристигане</mat-label>
-          <input matInput [matDatepicker]="arrivalPicker" formControlName="arrivalDate">
-          <mat-datepicker-toggle matSuffix [for]="arrivalPicker"></mat-datepicker-toggle>
-          <mat-datepicker #arrivalPicker></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Дата на заминаване</mat-label>
-          <input matInput [matDatepicker]="departurePicker" formControlName="departureDate">
-          <mat-datepicker-toggle matSuffix [for]="departurePicker"></mat-datepicker-toggle>
-          <mat-datepicker #departurePicker></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Клиент</mat-label>
-          <mat-select formControlName="clientId">
-            <mat-option value="">Моля, изберете клиент...</mat-option>
-            <mat-option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Хотел</mat-label>
-          <mat-select formControlName="hotelId">
-            <mat-option value="">Моля, изберете хотел...</mat-option>
-            <mat-option *ngFor="let hotel of hotels" [value]="hotel.id">{{ hotel.name }}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field class="md:col-span-2" appearance="outline">
-          <mat-label>Бележки</mat-label>
-          <textarea matInput rows="2" formControlName="notes"></textarea>
-        </mat-form-field>
+
+<div class="breadcrumb">
+  <a routerLink="/reservations">Резервации</a> > Добавяне
+</div>
+
+<div class="content-header">
+  <h1 class="page-title">Добави резервация</h1>
+</div>
+
+<div class="content-body">
+  <form class="form-container">
+    <!-- Дати -->
+    <div class="form-section">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Дата на пристигане</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Дата на заминаване</label>
+          <input type="date" class="form-control">
+        </div>
       </div>
     </div>
+
+    <!-- Клиент и Хотел -->
+    <div class="form-section">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Клиент</label>
+          <select class="form-control">
+            <option>Моля, изберете клиент...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Хотел</label>
+          <select class="form-control">
+            <option>Моля, изберете хотел...</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Бележки -->
+    <div class="form-section">
+      <div class="form-row single">
+        <div class="form-group">
+          <label class="form-label">Бележки</label>
+          <textarea class="form-control textarea" placeholder="Въведете бележки..."></textarea>
+        </div>
+      </div>
+    </div>
+
     <!-- Настаняване -->
-    <div class="bg-white rounded-xl shadow p-6 mb-6" formArrayName="accommodations">
-      <div class="font-semibold mb-2">Настаняване</div>
-      <div *ngFor="let acc of accommodations.controls; let i = index" [formGroupName]="i" class="mb-4">
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
-          <mat-form-field class="md:col-span-2" appearance="outline">
-            <mat-label>Тип стая</mat-label>
-            <mat-select formControlName="roomType">
-              <mat-option value="">Изберете тип стая...</mat-option>
-              <mat-option *ngFor="let room of roomTypes" [value]="room.id">{{ room.name }}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Изхранване</mat-label>
-            <mat-select formControlName="feeding">
-              <mat-option value="">Изберете изхранване...</mat-option>
-              <mat-option *ngFor="let feed of feedingTypes" [value]="feed.id">{{ feed.name }}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Брой стаи</mat-label>
-            <input matInput type="number" formControlName="roomsCount">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Сума</mat-label>
-            <input matInput type="number" formControlName="amount">
-            <span matSuffix>лв.</span>
-          </mat-form-field>
-          <button mat-icon-button color="warn" class="justify-self-end" (click)="removeAccommodation(i)"><mat-icon>delete</mat-icon></button>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
-          <mat-form-field appearance="outline">
-            <mat-label>Възрастни</mat-label>
-            <input matInput type="number" formControlName="adults">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Деца</mat-label>
-            <input matInput type="number" formControlName="children">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Бебета</mat-label>
-            <input matInput type="number" formControlName="babies">
-          </mat-form-field>
+    <div class="form-section">
+      <h3 class="form-section-title">Настаняване</h3>
+      
+      <div class="form-row single">
+        <div class="form-group">
+          <label class="form-label">Стая</label>
+          <input type="number" class="form-control" min="1">
         </div>
       </div>
-      <div class="flex justify-end mt-4">
-        <button mat-stroked-button color="primary" (click)="addAccommodation()">Добави настаняване</button>
-      </div>
-    </div>
-    <!-- Плащания -->
-    <div class="bg-white rounded-xl shadow p-6 mb-6" formArrayName="payments">
-      <div class="font-semibold mb-2">Плащания от клиент</div>
-      <div *ngFor="let pay of payments.controls; let j = index" [formGroupName]="j" class="mb-4">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
-          <mat-form-field appearance="outline">
-            <mat-label>Сума</mat-label>
-            <input matInput type="number" formControlName="amount">
-            <span matSuffix>лв.</span>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Тип</mat-label>
-            <mat-select formControlName="type">
-              <mat-option value="Вноска">Вноска</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Начин на плащане</mat-label>
-            <mat-select formControlName="paymentMethod">
-              <mat-option value="">Избери начин на плащане...</mat-option>
-              <mat-option *ngFor="let method of paymentChannels" [value]="method.id">{{ method.name }}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Дата на плащане</mat-label>
-            <input matInput [matDatepicker]="paymentDatePicker{{j}}" formControlName="paymentDate">
-            <mat-datepicker-toggle matSuffix [for]="paymentDatePicker{{j}}"></mat-datepicker-toggle>
-            <mat-datepicker #paymentDatePicker{{j}}></mat-datepicker>
-          </mat-form-field>
-          <button mat-icon-button color="warn" class="justify-self-end" (click)="removePayment(j)"><mat-icon>delete</mat-icon></button>
+
+      <div class="form-row quad">
+        <div class="form-group">
+          <label class="form-label">Тип стая <span class="text-danger">*</span></label>
+          <select class="form-control">
+            <option>Изберете тип стая...</option>
+          </select>
         </div>
-        <div class="flex items-center mt-4">
-          <mat-slide-toggle class="mr-4" formControlName="isPaid">Сума е платена</mat-slide-toggle>
+        <div class="form-group">
+          <label class="form-label">Изхранване <span class="text-danger">*</span></label>
+          <select class="form-control">
+            <option>Изберете изхранване...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Брой стаи <span class="text-danger">*</span></label>
+          <input type="number" class="form-control" min="1" value="1">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Сума <span class="text-danger">*</span></label>
+          <input type="number" class="form-control" step="0.01" min="0">
         </div>
       </div>
-      <div class="flex justify-end mt-4">
-        <button mat-stroked-button color="primary" (click)="addPayment()">Добави плащане</button>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Възрастни</label>
+          <input type="number" class="form-control" min="0" value="2">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Деца</label>
+          <input type="number" class="form-control" min="0" value="0">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Бебета</label>
+          <input type="number" class="form-control" min="0" value="0">
+        </div>
+        <div class="form-group">
+          <!-- Празна колона за баланс -->
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Добави настаняване</button>
       </div>
     </div>
-    <!-- Долни бутони -->
-    <div class="flex flex-wrap gap-2 justify-end mt-6">
-      <button mat-flat-button color="primary" (click)="submit()">Добави</button>
-      <button mat-stroked-button color="primary" (click)="submit(true)">Добави и добави друг</button>
-      <button mat-stroked-button color="basic">Отказ</button>
+
+    <!-- Плащания от клиент -->
+    <div class="form-section">
+      <h3 class="form-section-title">Плащания от клиент</h3>
+      
+      <div class="form-row single">
+        <div class="form-group">
+          <label class="form-label">Площад</label>
+          <input type="number" class="form-control" step="0.01" min="0">
+        </div>
+      </div>
+
+      <div class="form-row quad">
+        <div class="form-group">
+          <label class="form-label">Сума <span class="text-danger">*</span></label>
+          <input type="number" class="form-control" step="0.01" min="0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Тип <span class="text-danger">*</span></label>
+          <select class="form-control">
+            <option>Виссока</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Начин на плащане <span class="text-danger">*</span></label>
+          <select class="form-control">
+            <option>Избери начин на плащане...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Дата на плащане</label>
+          <input type="date" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-row single">
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox"> Сумата е платена
+          </label>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Добави плащане</button>
+      </div>
     </div>
-  </div>
+
+    <!-- Бутони за действие -->
+    <div class="btn-group">
+      <button type="submit" class="btn btn-primary">Добави</button>
+      <button type="button" class="btn btn-secondary">Добави и добави друг</button>
+      <button type="button" class="btn btn-outline" routerLink="/reservations">Откажи</button>
+    </div>
+  </form>
 </div>
