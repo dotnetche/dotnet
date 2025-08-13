@@ -1,0 +1,35 @@
+<div class="flex flex-col items-center w-full">
+  <div class="w-full max-w-2xl">
+    <h1 class="text-3xl font-bold mb-8 mt-8 text-center">Добави клиент</h1>
+    <div class="bg-white rounded-xl shadow p-6 mb-6">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <mat-form-field appearance="outline">
+            <mat-label>Име</mat-label>
+            <input matInput formControlName="firstName" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Фамилия</mat-label>
+            <input matInput formControlName="lastName" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Имейл</mat-label>
+            <input matInput formControlName="email" type="email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Телефон</mat-label>
+            <input matInput formControlName="phone">
+          </mat-form-field>
+          <mat-form-field class="md:col-span-2" appearance="outline">
+            <mat-label>Бележки</mat-label>
+            <textarea matInput rows="2" formControlName="notes"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end mt-6">
+          <button mat-flat-button color="primary" type="submit">Добави</button>
+          <button mat-stroked-button color="basic" type="button">Отказ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
