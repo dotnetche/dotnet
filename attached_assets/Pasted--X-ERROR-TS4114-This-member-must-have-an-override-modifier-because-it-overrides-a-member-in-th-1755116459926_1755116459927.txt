@@ -1,0 +1,195 @@
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/clients.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/extras.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/feeding-types.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/hotel-rooms.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/hotels.service.ts:15:2:
+      15 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/locations.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/operators.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/payment-channels.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/payment-types.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/reservation-statuses.service.ts:13:2:
+      13 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'CrudService<any>'. [plugin angular-compiler]
+
+    src/app/api/reservations.service.ts:14:2:
+      14 │   delete(id: number) { return this.httpClient.delete(`${this.APIUr...
+         ╵   ~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/extras/extras.component.html:17:50:
+      17 │ ...mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+         ╵                                    ~~~~~~~~~~
+
+  Error occurs in the template of component ExtrasComponent.
+
+    src/app/extras/extras.component.ts:6:15:
+      6 │   templateUrl: './extras.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/extras/extras.component.html:18:47:
+      18 │ ... mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+         ╵                                  ~~~~~~~~~~
+
+  Error occurs in the template of component ExtrasComponent.
+
+    src/app/extras/extras.component.ts:6:15:
+      6 │   templateUrl: './extras.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/payment-channels/payment-channels.component.html:17:50:
+      17 │ ...mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+         ╵                                    ~~~~~~~~~~
+
+  Error occurs in the template of component PaymentChannelsComponent.
+
+    src/app/payment-channels/payment-channels.component.ts:6:15:
+      6 │   templateUrl: './payment-channels.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/payment-channels/payment-channels.component.html:18:47:
+      18 │ ... mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+         ╵                                  ~~~~~~~~~~
+
+  Error occurs in the template of component PaymentChannelsComponent.
+
+    src/app/payment-channels/payment-channels.component.ts:6:15:
+      6 │   templateUrl: './payment-channels.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/reservation-statuses/reservation-statuses.component.html:17:50:
+      17 │ ...mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+         ╵                                    ~~~~~~~~~~
+
+  Error occurs in the template of component ReservationStatusesComponent.
+
+    src/app/reservation-statuses/reservation-statuses.component.ts:6:15:
+      6 │   templateUrl: './reservation-statuses.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/reservation-statuses/reservation-statuses.component.html:18:47:
+      18 │ ... mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+         ╵                                  ~~~~~~~~~~
+
+  Error occurs in the template of component ReservationStatusesComponent.
+
+    src/app/reservation-statuses/reservation-statuses.component.ts:6:15:
+      6 │   templateUrl: './reservation-statuses.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8004: No pipe found with name 'date'. [plugin angular-compiler]
+
+    src/app/reservations/reservations.component.html:45:41:
+      45 │             <td>{{ reservation.checkIn | date:'dd.MM.yyyy' }}</td>
+         ╵                                          ~~~~
+
+  Error occurs in the template of component ReservationsComponent.
+
+    src/app/reservations/reservations.component.ts:6:15:
+      6 │   templateUrl: './reservations.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8004: No pipe found with name 'date'. [plugin angular-compiler]
+
+    src/app/reservations/reservations.component.html:46:42:
+      46 │             <td>{{ reservation.checkOut | date:'dd.MM.yyyy' }}</td>
+         ╵                                           ~~~~
+
+  Error occurs in the template of component ReservationsComponent.
+
+    src/app/reservations/reservations.component.ts:6:15:
+      6 │   templateUrl: './reservations.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
