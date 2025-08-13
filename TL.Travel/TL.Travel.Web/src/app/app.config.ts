@@ -11,5 +11,5 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(withFetch(), withInterceptors([requestInterceptor])), provideNativeDateAdapter(), provideAnimationsAsync(), importProvidersFrom(MatIconModule, CommonModule)]
+  providers: [provideRouter(routes), provideHttpClient(withFetch(), withInterceptors([requestInterceptor])), provideNativeDateAdapter(), provideAnimationsAsync(), importProvidersFrom(MatIconModule, CommonModule), provideAnimationsAsync()]
 };
