@@ -10,5 +10,5 @@ export class PaymentTypesService extends CrudService<any> {
   getAll() { return this.httpClient.get<any[]>(`${this.APIUrl}/GetAll`); }
   getById(id: number) { return this.httpClient.get<any>(`${this.APIUrl}/GetById`, { params: { id } }); }
   addEdit(model: any, id = 0) { return this.httpClient.post<any>(`${this.APIUrl}/AddEdit`, model, { params: { id } }); }
-  delete(id: number) { return this.httpClient.delete(`${this.APIUrl}/Delete`, { params: { id } }); }
+  override delete(id: number) { return this.httpClient.delete(`${this.APIUrl}/Delete/${id}`); }
 }

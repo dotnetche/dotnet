@@ -6,7 +6,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { requestInterceptor } from './core/request.interceptor';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { importProvidersFrom } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(withFetch(), withInterceptors([requestInterceptor])), provideNativeDateAdapter(), provideAnimationsAsync()]
+  providers: [provideRouter(routes), provideHttpClient(withFetch(), withInterceptors([requestInterceptor])), provideNativeDateAdapter(), provideAnimationsAsync(), importProvidersFrom(MatIconModule, CommonModule)]
 };

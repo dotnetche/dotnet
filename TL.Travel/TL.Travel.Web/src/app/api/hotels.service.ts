@@ -12,7 +12,7 @@ export class HotelsService extends CrudService<any> {
   getById(id: number) { return this.httpClient.get<any>(`${this.APIUrl}/GetById`, { params: { id } }); }
   getAll() { return this.httpClient.get<any[]>(`${this.APIUrl}/GetAll`); }
   addEdit(model: any, id = 0) { return this.httpClient.post<any>(`${this.APIUrl}/AddEdit`, model, { params: { id } }); }
-  delete(id: number) { return this.httpClient.delete(`${this.APIUrl}/Delete`, { params: { id } }); }
+  override delete(id: number) { return this.httpClient.delete(`${this.APIUrl}/Delete/${id}`); }
   getHotelImagesList(id: number) { return this.httpClient.get<any[]>(`${this.APIUrl}/GetHotelImagesList`, { params: { id } }); }
   downloadHotelImage(imageId: number) { return this.httpClient.get(`${this.APIUrl}/DownloadHotelImage`, { params: { imageId }, responseType: 'blob' }); }
   downloadHotelPhotosPdf(id: number) { return this.httpClient.get(`${this.APIUrl}/DownloadHotelPhotosPdf`, { params: { id }, responseType: 'blob' }); }
