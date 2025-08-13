@@ -1,14 +1,31 @@
 
-<div class="content-header">
-  <h1 class="page-title">Резервации</h1>
+<div class="top-header">
+  <div class="header-nav">
+    <a href="#" class="header-nav-item active">Резервации</a>
+    <a href="#" class="header-nav-item">Списък</a>
+  </div>
+  <div class="user-menu">
+    <div class="user-avatar">D</div>
+  </div>
 </div>
 
-<div class="content-body">
-  <div class="card">
-    <div class="card-title">Списък с резервации</div>
+<div class="content-area">
+  <div class="content-header">
+    <h1 class="page-title">Резервации</h1>
+    <div class="header-actions">
+      <button class="add-btn" routerLink="/reservations/add">
+        Добави резервация
+      </button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="search-section">
+      <input type="text" class="search-input" placeholder="Търсене...">
+    </div>
     
-    <div class="data-table" *ngIf="!loading; else loadingTemplate">
-      <table>
+    <div *ngIf="!loading; else loadingTemplate">
+      <table class="data-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -29,8 +46,10 @@
             <td>{{ reservation.checkOut | date:'dd.MM.yyyy' }}</td>
             <td>{{ reservation.status }}</td>
             <td>
-              <button class="btn btn-outline" style="margin-right: 8px;">Редактирай</button>
-              <button class="btn btn-outline">Изтрий</button>
+              <div class="actions">
+                <i class="material-icons action-icon" title="Редактирай">edit</i>
+                <i class="material-icons action-icon" title="Изтрий">delete</i>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -42,9 +61,19 @@
         Зареждане на резервации...
       </div>
     </ng-template>
+
+    <div class="pagination">
+      <div class="pagination-info">
+        От 1 до 10 от 10 резултата
+      </div>
+      <div class="pagination-controls">
+        <select class="pagination-select">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+        <span>на страница</span>
+      </div>
+    </div>
   </div>
 </div>
-
-<button class="add-item-btn" routerLink="/reservations/add" title="Добави резервация">
-  <i class="material-icons">add</i>
-</button>

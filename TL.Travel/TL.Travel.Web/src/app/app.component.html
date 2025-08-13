@@ -1,78 +1,75 @@
-
 <div class="app-container">
   <nav class="sidebar">
     <div class="sidebar-header">
       <h1 class="sidebar-title">TL Travel</h1>
     </div>
-    
-    <div class="sidebar-nav">
-      <a routerLink="/employees" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">dashboard</i>
-        Табло
-      </a>
-      
-      <a routerLink="/reservations" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">book_online</i>
-        Резервации
-      </a>
-      
-      <a routerLink="/clients" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">people</i>
-        Клиенти
-      </a>
-      
-      <a routerLink="/hotels" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">hotel</i>
-        Хотели
-      </a>
-      
-      <a routerLink="/hotel-rooms" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">meeting_room</i>
-        Стаи
-      </a>
-      
-      <a routerLink="/operators" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">business</i>
-        Туристически оператори
-      </a>
-      
-      <a routerLink="/locations" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">place</i>
-        Направления
-      </a>
-      
-      <a routerLink="/feeding-types" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">restaurant</i>
-        Начини на хранене
-      </a>
-      
-      <a routerLink="/extras" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">add_circle</i>
-        Дестинации
-      </a>
-      
-      <a routerLink="/payment-types" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">payment</i>
-        Начини на плащане
-      </a>
-      
-      <a routerLink="/payment-channels" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">account_balance</i>
-        Платежни канали
-      </a>
-      
-      <a routerLink="/reservation-statuses" routerLinkActive="active" class="nav-item">
-        <i class="material-icons">flag</i>
-        Статуси на резервация
-      </a>
-    </div>
-    
-    <div class="user-profile">
-      <div class="user-avatar">П</div>
-      <span>Потребител</span>
-    </div>
+
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">dashboard</i>
+          <span>Табло</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/reservations" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">event_note</i>
+          <span>Резервации</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/clients" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">people</i>
+          <span>Клиенти</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/hotels" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">hotel</i>
+          <span>Хотели</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/hotel-rooms" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">meeting_room</i>
+          <span>Стаи</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/operators" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">business</i>
+          <span>Туристически оператори</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/locations" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">place</i>
+          <span>Изхранване</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/feeding-types" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">restaurant</i>
+          <span>Дестинации</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/payment-types" class="nav-link" routerLinkActive="active">
+          <i class="material-icons nav-icon">payment</i>
+          <span>Начини на плащане</span>
+        </a>
+      </li>
+    </ul>
   </nav>
-  
+
   <main class="main-content">
     <router-outlet></router-outlet>
   </main>
