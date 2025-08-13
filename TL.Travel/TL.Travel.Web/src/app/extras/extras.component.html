@@ -14,8 +14,12 @@
         <td class="border px-4 py-2">{{ extra.id }}</td>
         <td class="border px-4 py-2">{{ extra.name }}</td>
         <td class="border px-4 py-2">
-          <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-          <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+          <button type="button" class="mr-2 p-2 text-blue-600 hover:bg-blue-100 rounded">
+            <span class="material-icons">edit</span>
+          </button>
+          <button type="button" class="p-2 text-red-600 hover:bg-red-100 rounded">
+            <span class="material-icons">delete</span>
+          </button>
         </td>
       </tr>
     </tbody>

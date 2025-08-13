@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ExtrasService } from '../api/extras.service';
 
 @Component({
   selector: 'app-extras',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './extras.component.html',
   styleUrls: ['./extras.component.css']
 })
