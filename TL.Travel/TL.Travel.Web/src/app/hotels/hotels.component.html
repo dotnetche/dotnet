@@ -1,4 +1,3 @@
-
 <div class="top-header">
   <div class="header-nav">
     <a href="#" class="header-nav-item active">Хотели</a>
@@ -23,7 +22,7 @@
     <div class="search-section">
       <input type="text" class="search-input" placeholder="Търсене...">
     </div>
-    
+
     <div *ngIf="!loading; else loadingTemplate">
       <table class="data-table">
         <thead>
@@ -43,8 +42,12 @@
             <td>{{ hotel.description }}</td>
             <td>
               <div class="actions">
-                <i class="material-icons action-icon" title="Редактирай">edit</i>
-                <i class="material-icons action-icon" title="Изтрий">delete</i>
+                <button type="button" class="mr-2 p-2 text-blue-600 hover:bg-blue-100 rounded">
+            <span class="material-icons">edit</span>
+          </button>
+          <button type="button" class="p-2 text-red-600 hover:bg-red-100 rounded">
+            <span class="material-icons">delete</span>
+          </button>
               </div>
             </td>
           </tr>

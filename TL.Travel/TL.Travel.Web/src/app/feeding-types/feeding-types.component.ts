@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FeedingTypesService } from '../api/feeding-types.service';
 
 @Component({
   selector: 'app-feeding-types',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './feeding-types.component.html',
   styleUrls: ['./feeding-types.component.css']
 })

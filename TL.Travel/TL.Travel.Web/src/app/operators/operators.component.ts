@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { OperatorsService } from '../api/operators.service';
 
 @Component({
   selector: 'app-operators',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './operators.component.html',
   styleUrls: ['./operators.component.css']
 })

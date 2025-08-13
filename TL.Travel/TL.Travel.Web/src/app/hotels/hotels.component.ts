@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HotelsService } from '../api/hotels.service';
 
 @Component({
   selector: 'app-hotels',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './hotels.component.html',
   styleUrls: ['./hotels.component.css']
 })

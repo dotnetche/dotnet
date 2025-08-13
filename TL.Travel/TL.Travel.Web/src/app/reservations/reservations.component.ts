@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ReservationsService } from '../api/reservations.service';
 
 @Component({
   selector: 'app-reservations',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './reservations.component.html',
   styleUrls: ['./reservations.component.css']
 })

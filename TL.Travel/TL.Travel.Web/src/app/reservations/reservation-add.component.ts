@@ -7,9 +7,12 @@ import { HotelRoomsService } from '../api/hotel-rooms.service';
 import { FeedingTypesService } from '../api/feeding-types.service';
 import { PaymentTypesService } from '../api/payment-types.service';
 import { PaymentChannelsService } from '../api/payment-channels.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-reservation-add',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './reservation-add.component.html',
   styleUrls: []
 })
