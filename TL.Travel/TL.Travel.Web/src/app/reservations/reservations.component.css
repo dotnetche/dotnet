@@ -1,3 +1,1 @@
-table { @apply w-full border-collapse; }
-th, td { @apply border px-4 py-2; }
-th { @apply bg-gray-100; }
+/* Styles are now handled by Tailwind CSS in styles.css */

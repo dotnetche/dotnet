@@ -2,7 +2,11 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/clients', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { 
+    path: 'dashboard', 
+    loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent) 
+  },
   { 
     path: 'clients', 
     loadComponent: () => import('./clients/clients.component').then(m => m.ClientsComponent) 
@@ -28,6 +32,10 @@ export const routes: Routes = [
     loadComponent: () => import('./reservations/reservations.component').then(m => m.ReservationsComponent) 
   },
   { 
+    path: 'reservations/add', 
+    loadComponent: () => import('./reservations/reservation-add.component').then(m => m.ReservationAddComponent) 
+  },
+  { 
     path: 'feeding-types', 
     loadComponent: () => import('./feeding-types/feeding-types.component').then(m => m.FeedingTypesComponent) 
   },
@@ -39,5 +47,5 @@ export const routes: Routes = [
     path: 'extras', 
     loadComponent: () => import('./extras/extras.component').then(m => m.ExtrasComponent) 
   },
-  { path: '**', redirectTo: '/clients' }
+  { path: '**', redirectTo: '/dashboard' }
 ];
