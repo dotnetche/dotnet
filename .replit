@@ -1,0 +1,15 @@
+[workflows]
+runButton = "Start Angular Dev Server"
+
+[[workflows.workflow]]
+name = "Start Angular Dev Server"
+author = 46109684
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd TL.Travel/TL.Travel.Web"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm start"
