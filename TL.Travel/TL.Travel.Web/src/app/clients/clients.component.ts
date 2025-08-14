@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ClientsService } from '../api/clients.service';
+import { ReservationsService } from '../api/reservations.service';
 
 @Component({
   selector: 'app-clients',
@@ -112,7 +113,7 @@ import { ClientsService } from '../api/clients.service';
   `,
   styles: []
 })
-export class ReservationsComponent implements OnInit {
+export class ClientsComponent implements OnInit {
   reservations: any[] = [];
   filteredReservations: any[] = [];
   clients: any[] = [];
